@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Minimal Tailwind CSS landing page template" />
+    <title>Landing — Your Product</title>
+
+    <!-- Tailwind Play CDN (good for prototypes). Replace with a proper Tailwind build for production. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Optional: configure Tailwind via the CDN config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#030303',
+                        accent: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fallback font stack (replace with your preferred font or webfont) -->
+    <style>
+        :root {
+            --max-w: 1600px;
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-[var(--bg)] text-white dark:bg-slate-900 dark:text-slate-200">
+
+    <!-- Page wrapper -->
+    <div class="min-h-screen flex flex-col">
+
+        <!-- NAV -->
+        <header
+            class="hidden sticky top-0 z-40 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
+            <div class="mx-auto w-full max-w-[var(--max-w)] px-6 py-4 flex items-center justify-between">
+                <a href="#" class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold">
+                        YP</div>
+                    <span class="font-semibold text-lg">YourProduct</span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-6 text-sm">
+                    <a href="#features" class="hover:underline">Features</a>
+                    <a href="#pricing" class="hover:underline">Pricing</a>
+                    <a href="#contact" class="hover:underline">Contact</a>
+                    <a href="#" class="px-4 py-2 rounded-md border border-slate-200 dark:border-slate-700">Sign in</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobileNavBtn" aria-label="Toggle menu"
+                        class="p-2 rounded-md focus:outline-none focus:ring">
+                        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobileNav" class="md:hidden hidden border-t border-slate-100 dark:border-slate-800">
+                <div class="px-6 py-4 flex flex-col gap-2">
+                    <a href="#features" class="py-2">Features</a>
+                    <a href="#pricing" class="py-2">Pricing</a>
+                    <a href="#contact" class="py-2">Contact</a>
+                    <a href="#" class="mt-2 px-4 py-2 rounded-md border text-center">Sign in</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <main class="flex-1">
+            <section class="mx-auto w-full max-w-[var(--max-w)] px-6 py-2">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <h1 class="text-4xl sm:text-9xl uppercase font-normal tracking-tighter">Brand & Freelancer
+                            Website
+                            Designer</h1>
+
+                        <div class="my-8 flex items-center flex-wrap gap-3">
+
+                            <a href="#github"
+                                class="uppercase text-2xl font-normal inline-flex items-center gap-2 dark:border-slate-700">github</a>
+                            <a href="#dribble"
+                                class="uppercase text-2xl font-normal inline-flex items-center gap-2 dark:border-slate-700">dribble</a>
+                            <a href="#linkedin"
+                                class="uppercase text-2xl font-normal inline-flex items-center gap-2 dark:border-slate-700">linkedin</a>
+                            <a href="/lestTalks.html"
+                                class="ml-10 uppercase text-4xl inline-flex items-center gap-3 bg-primary text-white font-normal shadow hover:opacity-95">lestTalks</a>
+                        </div>
+                    </div>
+
+                    <!-- Illustration / image placeholder -->
+                    <div class="flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGVzaWduJTIwd2Vic2l0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                            alt="Illustration" class="w-full h-auto rounded-lg shadow-lg dark:border-slate-800">
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURES -->
+            <section id="features" class="border-t border-slate-100 dark:border-slate-800">
+                <div class="mx-auto w-full max-w-[var(--max-w)] px-6 py-16">
+                    <h2 class="text-2xl font-semibold">Features</h2>
+                    <p class="mt-2 text-slate-500 dark:text-slate-400 max-w-2xl">What makes this product great — short
+                        bullets with small icons.</p>
+
+                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
+                            <h3 class="font-semibold">Fast to build</h3>
+                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">A small starting point with good
+                                defaults and accessibility in mind.</p>
+                        </div>
+
+                        <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
+                            <h3 class="font-semibold">Responsive</h3>
+                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Looks great on phones, tablets
+                                and desktops.</p>
+                        </div>
+
+                        <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
+                            <h3 class="font-semibold">Customizable</h3>
+                            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">Easily extend the design system
+                                to match your brand.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="bg-slate-50 dark:bg-slate-800">
+                <div
+                    class="mx-auto w-full max-w-[var(--max-w)] px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold">Ready to get started?</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">Start your free trial — no credit card
+                            required.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#signup" class="px-5 py-3 rounded-md bg-primary text-white font-semibold">Start
+                            free</a>
+                        <a href="#contact"
+                            class="px-5 py-3 rounded-md border border-slate-200 dark:border-slate-700">Contact sales</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRICING -->
+            <section id="pricing" class="mx-auto w-full max-w-[var(--max-w)] px-6 py-16">
+                <h2 class="text-2xl font-semibold">Pricing</h2>
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
+                        <div class="text-lg font-semibold">Free</div>
+                        <div class="mt-4 text-3xl font-extrabold">$0</div>
+                        <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">Basic features for personal use.</p>
+                        <a class="mt-6 inline-block px-4 py-2 rounded-md border text-sm">Get started</a>
+                    </div>
+
+                    <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800 shadow-lg">
+                        <div class="text-lg font-semibold">Pro</div>
+                        <div class="mt-4 text-3xl font-extrabold">$12<span class="text-sm font-medium">/mo</span></div>
+                        <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">For teams and professionals.</p>
+                        <a class="mt-6 inline-block px-4 py-2 rounded-md bg-primary text-white font-semibold">Buy
+                            now</a>
+                    </div>
+
+                    <div class="p-6 rounded-lg border border-slate-100 dark:border-slate-800">
+                        <div class="text-lg font-semibold">Enterprise</div>
+                        <div class="mt-4 text-3xl font-extrabold">Custom</div>
+                        <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">Contact us for volume pricing and
+                            SSO.</p>
+                        <a class="mt-6 inline-block px-4 py-2 rounded-md border text-sm">Contact</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT / FOOTER -->
+            <footer id="contact" class="mt-12 border-t border-slate-100 dark:border-slate-800">
+                <div
+                    class="mx-auto w-full max-w-[var(--max-w)] px-6 py-12 flex flex-col md:flex-row items-start justify-between gap-8">
+                    <div>
+                        <div class="font-semibold text-lg">YourProduct</div>
+                        <p class="mt-2 text-sm text-slate-500 dark:text-slate-400 max-w-sm">Small description about your
+                            company, mission, or contact info.</p>
+                    </div>
+
+                    <div class="flex gap-8">
+                        <div>
+                            <h4 class="font-medium">Product</h4>
+                            <ul class="mt-3 text-sm text-slate-500 dark:text-slate-400 space-y-2">
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Pricing</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="font-medium">Company</h4>
+                            <ul class="mt-3 text-sm text-slate-500 dark:text-slate-400 space-y-2">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full border-t border-slate-100 dark:border-slate-800">
+                    <div
+                        class="mx-auto w-full max-w-[var(--max-w)] px-6 py-6 text-sm text-slate-500 dark:text-slate-400">
+                        © <span id="year"></span> YourCompany — All rights reserved.</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Minimal JS: mobile nav + year -->
+    <script>
+        const btn = document.getElementById('mobileNavBtn');
+        const menu = document.getElementById('mobileNav');
+        btn && btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // insert current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
