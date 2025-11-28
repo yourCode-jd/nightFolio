@@ -1,0 +1,50 @@
+:root {
+    --max-w: 1600px;
+    --bg: #000000;
+    --font-saira: "Saira Condensed", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+}
+
+body {
+    font-family: "Saira Condensed", sans-serif;
+    color: #e7e7e7;
+}
+
+html,
+h1.h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    font-family: "Saira Condensed", sans-serif !important;
+}
+
+text {
+    font-family: var(--font-saira);
+    letter-spacing: 6px;
+    font-variant-ligatures: none;
+    animation: rotate 25s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.angleRotate {
+    animation: rotate 3s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

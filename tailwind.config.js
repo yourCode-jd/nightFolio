@@ -6,7 +6,12 @@ module.exports = {
     "./**/*.{js,ts,jsx,tsx}", // optional, helpful if you add JS files later
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        saira: ["Saira Condensed", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
