@@ -832,7 +832,7 @@
             <!-- Services -->
             <section class="px-6 py-16">
                 <div class="mx-auto w-full max-w-[var(--max-w)]">
-                    <div class="mx-auto w-full">
+                    <div class="mx-auto w-full mb-24">
                         <span class="text-2xl justify-center uppercase mb-6 flex items-center gap-5">
                             <!-- square shape -->
                             <span class="block w-4 h-4 rotate-45 bg-white angleRotate"></span>
@@ -841,7 +841,7 @@
                             <br> Services
                         </h2>
                     </div>
-                    <div class="py-24 max-w-screen-xl mx-auto">
+                    <div class="max-w-screen-xl mx-auto">
                         <!-- Image -->
                         <div class="w-full">
                             <ul class="grid grid-cols-3 gap-4">
@@ -1032,74 +1032,201 @@
             </section>
 
 
-
-            <!-- CTA -->
-            <!-- <section class="bg-slate-50 dark:bg-slate-800">
-                <div
-                    class="mx-auto w-full max-w-[var(--max-w)] px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
-                    <div>
-                        <h3 class="text-xl font-semibold">Ready to get started?</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400">Start your free trial — no credit card
-                            required.</p>
-                    </div>
-                    <div class="flex gap-3">
-                        <a href="#signup" class="px-5 py-3 rounded-md bg-primary text-[#e7e7e7] font-semibold">Start
-                            free</a>
-                        <a href="#contact"
-                            class="px-5 py-3 rounded-md border border-slate-200 dark:border-slate-700">Contact sales</a>
-                    </div>
-                </div>
-            </section> -->
-
             <!-- CONTACT / FOOTER -->
-            <footer id="contact" class="mt-12 border-t border-slate-100 dark:border-slate-800">
+            <footer class="px-6 py-16">
                 <div
-                    class="mx-auto w-full max-w-[var(--max-w)] px-6 py-12 flex flex-col md:flex-row items-start justify-between gap-8">
-                    <div>
-                        <div class="font-semibold text-lg">YourProduct</div>
-                        <p class="mt-2 text-sm text-slate-500 dark:text-slate-400 max-w-sm">Small description about your
-                            company, mission, or contact info.</p>
-                    </div>
-
-                    <div class="flex gap-8">
-                        <div>
-                            <h4 class="font-medium">Product</h4>
-                            <ul class="mt-3 text-sm text-slate-500 dark:text-slate-400 space-y-2">
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Pricing</a></li>
-                            </ul>
+                    class="px-24 mx-auto w-full max-w-[var(--max-w)] flex lg:flex-row flex-col gap-8 justify-between pb-10">
+                    <div class="flex gap-8 flex-wrap justify-query contact-info-container">
+                        <div class="relative border border-[var(--bg-primary-inverse)] rounded-full p-8 group">
+                            <h1 class="text-3xl">+1234 4567 8926</h1>
                         </div>
-
-                        <div>
-                            <h4 class="font-medium">Company</h4>
-                            <ul class="mt-3 text-sm text-slate-500 dark:text-slate-400 space-y-2">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Careers</a></li>
-                            </ul>
+                        <div class="relative border border-[var(--bg-primary-inverse)] rounded-full p-8 group">
+                            <h1 class="text-3xl">example@gmail.com</h1>
+                        </div>
+                        <div class="relative border border-[var(--bg-primary-inverse)] rounded-full p-8 group">
+                            <h1 class="text-3xl">New york, 1322</h1>
                         </div>
                     </div>
+                    <h1 class="text-5xl text-query">
+                        Interested in <br>
+                        working with me ?
+                    </h1>
                 </div>
 
-                <div class="w-full border-t border-slate-100 dark:border-slate-800">
-                    <div
-                        class="mx-auto w-full max-w-[var(--max-w)] px-6 py-6 text-sm text-slate-500 dark:text-slate-400">
-                        © <span id="year"></span> YourCompany — All rights reserved.</div>
+                <!-- Contact form -->
+                <div class="mx-auto w-full max-w-[var(--max-w)]">
+                    <form id="contact-form" method="post">
+                        <div class="wrapper border-t">
+                            <div class="grid md:grid-cols-2 grid-cols-1">
+                                <label class="py-16 space-y-8 block duration md:border-0 border-b">
+                                    <h1 class="text-3xl">Name *</h1>
+                                    <input placeholder="John Alex" type="text" name="name"
+                                        class="text-lg placeholder:text-[var(--light-text-fixed)] outline-none p-0! flex bg-transparent text-[var(--text-primary)] w-full py-8 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 mb-0!">
+                                    <p class="text-red-500! font-light name-error mt-2"></p>
+                                </label>
+
+                                <label class="py-16 space-y-8 block duration md:border-l 2xl:pl-24 lg:pl-16 md:pl-8">
+                                    <h1 class="text-3xl">Your Email *</h1>
+                                    <input placeholder="john.example@gmail.com" name="email" type="text"
+                                        class="text-lg placeholder:text-[var(--light-text-fixed)] outline-none p-0! flex bg-transparent text-[var(--text-primary)] w-full py-8 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:cursor-not-allowed disabled:opacity-50 mb-0!">
+                                    <p class="text-red-500! font-light email-error mt-2"></p>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class=" md:border-y border-t md:pr-0!">
+                            <div class="grid md:grid-cols-[2fr_1fr] grid-cols-1">
+                                <label class="py-16 space-y-8 block duration ">
+                                    <h1 class="text-3xl">Your Message *</h1>
+                                    <textarea type="text" name="message" placeholder="Hi, I'm Looking for..."
+                                        class="resize-none placeholder:text-[var(--light-text-fixed)] outline-none flex bg-transparent text-[var(--text-primary)] w-full ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 mb-0!"
+                                        rows="4"></textarea>
+                                    <p class="text-red-500! font-light message-error mt-2"></p>
+                                </label>
+
+                                <button
+                                    class=" group flex justify-center items-center w-full bg-[#e7e7e7] text-[#e7e7e7] font-bold text-3xl"
+                                    type="submit">
+                                    <span class="spinner hidden"></span>
+                                    <div
+                                        class="flex justify-center items-center font-medium py-16 text-4xl text-[#232323] uppercase text-end">
+                                        <span class="send">
+                                            Send To <br>
+                                            Me
+                                        </span>
+
+                                        <span class="failed hidden">
+                                            failed <br>
+                                            Try Again
+                                        </span>
+
+                                        <span class="success hidden">
+                                            Email Sent <br>
+                                            Successfully
+                                        </span>
+
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            class="fill-[#232323] size-[120px] check-icon hidden">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                            </g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g id="Circle_Check" data-name="Circle Check">
+                                                    <g>
+                                                        <path
+                                                            d="M15.81,10.4a.5.5,0,0,0-.71-.71l-3.56,3.56L9.81,11.52a.5.5,0,0,0-.71.71l2.08,2.08a.513.513,0,0,0,.71,0Z">
+                                                        </path>
+                                                        <path
+                                                            d="M12,21.934A9.934,9.934,0,1,1,21.933,12,9.945,9.945,0,0,1,12,21.934ZM12,3.067A8.934,8.934,0,1,0,20.933,12,8.944,8.944,0,0,0,12,3.067Z">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+
+                                        <span class="overflow-hidden relative size-[100px] arrow-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                                class="absolute stroke-[#232323] translate-30 -translate-x-30 group-hover:translate-0 size-[100px]"
+                                                stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class=" mt-16 hidden">
+                            <div class="p-8 flex-center border gap-x-4 rad">
+                                <p class="text-center text-lg"></p>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </footer>
+            <!-- Copyright -->
+            <div
+                class="w-full bg-[url('assets/images/bg.jpeg')] bg-cover bg-center bg-fixed h-screen flex flex-col items-center justify-center relative">
+                <div
+                    class="w-full h-full absolute left-0 top-0 backdrop-blur-[2px] bg-gradient-to-t from-[#000000] via-[#000000] to-transparent">
+                </div>
+                <div class="px-6 py-6 text-sm text-black">
+                    © <span id="year"></span> YourCompany — All rights reserved.
+                </div>
+                <div class="my-12 flex items-center flex-wrap gap-2">
+
+                    <a href="#github"
+                        class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">github
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                            </g>
+                            <g id="SVGRepo_iconCarrier">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#dribble"
+                        class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">dribble
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                            </g>
+                            <g id="SVGRepo_iconCarrier">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </g>
+                        </svg></a>
+                    <a href="#linkedin"
+                        class="uppercase text-3xl font-normal inline-flex items-center gap-0 dark:border-slate-700">linkedin
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            class="group-hover:-translate-y-7 group-hover:translate-x-7 size-8" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                            </g>
+                            <g id="SVGRepo_iconCarrier">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </g>
+                        </svg></a>
+                    <button class="ml-12 group lg:text-5xl text-3xl uppercase flex gap-2 items-center "
+                        name="portfolio">
+                        my work
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="size-9 group-hover:rotate-90 duration transition-all" stroke="currentColor">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                            </g>
+                            <g id="SVGRepo_iconCarrier">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </g>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
         </main>
     </div>
 
-    <!-- Minimal JS: mobile nav + year -->
-    <script>
-        const btn = document.getElementById('mobileNavBtn');
-        const menu = document.getElementById('mobileNav');
-        btn && btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // insert current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <!-- scrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="js/customScript.js"></script>
 </body>
 
 </html>
